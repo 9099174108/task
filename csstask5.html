@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .head {
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 10vw;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img {
+            
+            padding: 0px 2px;
+        }
+        .logo h1 {
+            padding: 0px 6px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .navright {
+            margin-right: 15vw;
+        }
+        .navright nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navright nav ul li {
+            list-style: none;
+            padding: 41px 20px;
+        }
+        .navright nav ul li:hover{
+            background-color: blue;
+        }
+        .navright nav ul a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            cursor: pointer;
+        }
+        .navright button{
+            width: 70px;
+            height: 25px;
+            margin-left: 15px;
+            background-color: coral;
+            cursor: pointer;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .navright button:hover{
+            background-color: red;
+            width: 75px;
+            height: 30px;
+        }
+        .search {
+            display: flex;
+            margin-left: 70px;
+        }
+        .search p {
+            padding-top: 10px;
+            padding-right: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search img {
+            height: 40px;
+            width: 40px;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: coral;
+            cursor: pointer;
+        }
+        .container {
+            
+            height: 68vh;
+            justify-content: center;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-image: url(https://wallpaper.dog/large/20421318.jpg);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .heading h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 90px;
+            padding-bottom: 10px;
+        }
+        .bigbtn {
+            padding-top: 30px;
+
+        }
+        .bigbtn input {
+            background-color: coral;
+            height: 40px;
+            width: 150px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: large;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        .service {
+            height: 30vh;
+        }
+        .service button {
+            height: 35px;
+            width: 120px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 3px;
+            position: absolute;
+            left: 710px;
+            bottom: 104px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .menu {
+            position: relative;
+        
+            height: 15vh;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+        .option {
+            justify-content: center;
+            align-items: center;
+            padding: 0px 30px;
+            position: relative;
+            right: 10px;
+        }
+        .option h5 img{
+            width: 120px;
+            padding: 30px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .option h5 {
+            margin-bottom: 15px;
+            height: 140px;
+            width: 140px;
+            background-color: skyblue;
+            border-radius: 50%;
+        }
+        .option p a {
+            text-decoration: none;
+            color: blue;
+        }
+        .portfolio {
+            height: 80vh;
+            background-color: #172337;
+            display: flex;
+        }
+        .workmenu {
+            display: flex;
+            margin-top: 50px;
+        }
+        .workmenu h1 {
+            color: chocolate;
+            position: relative;
+            left: 390px;
+        }
+        .workmenu button {
+            height: 30px;
+            width: 100px;
+            background-color: #0d6efd;
+            border-radius: 4px;
+            border: none;
+            position: relative;
+            left: 181%;
+        }
+        .workmenu button a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+        .workbox {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .workbox1 {
+            height: 188px;
+            width: 240px;
+            position: relative;
+            background-color: silver;
+            border: 9px solid white;
+            margin: 0px 20px;
+            right: 55px;
+        }
+        .workbox1 img {
+            position: absolute;
+            top: 57px;
+            left: 70px;
+        }
+        .workbox1 a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            top: 68px;
+            left: 120px;
+        }
+        .txt {
+            position: absolute;
+            top: 195px;
+            color: white;
+        }
+        .txtcolor {
+            color: chocolate;
+            font-weight: bolder;
+        }
+        .offersbox {
+            height: 60vh;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .offersbox h1 {
+            color: #0d6efd;
+            padding-bottom: 10px;
+        }
+        .boxes {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            margin: 0px 230px;
+            margin-top: 30px;
+        }
+        .offersbox1{
+            text-align: left;
+        }
+        .offersbox1 a {
+            text-decoration: none;
+            color: #0d6efd;
+        }
+        .offersbox1 h3 {
+            color: #0d6efd;
+            margin-bottom: 8px;
+        }
+        button.moreinfo {
+            width: 60px;
+            height: 25px;
+            background-color: #0d6efd;
+            border: none;
+            color: white;
+            border-radius: 2px;
+            position: relative;
+            left: 90px;
+            margin-top: 12px;
+            margin-bottom: 16px;
+            cursor: pointer;
+        }
+       
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="navlaft">
+            <div class="logo">
+                <img src="yourlogo.jpg" alt="" width="50px">
+                <h1>Your logo</h1>
+            </div>
+        </div>
+        <div class="navright">
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <button>Blog</button>
+                    <div class="search">
+                        <p>Search</p>
+                        <img src="https://webstockreview.net/images/search-icon-png-4.png" alt="" width="20px">
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>GOOD DESIGN IS GOOD BUSINESS</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at aliquid  suscipit tempore dolores  assumenda  vitae <br>  harum ex nostrum explicabo  laudantium voluptatem accusantium doloribus, autem a nisi itaque consequatur porro?</span>
+            <div class="bigbtn">
+                <input type="submit" value="LEARN MORE">
+            </div>
+        </div>
+    </div>
+    <div class="service">
+        <button>OUR SERVICE</button>
+    </div>
+    <div class="manu">
+        <div class="box">
+            <div class="option">
+                <h5><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNtAyxa2vkPKYqpSPHPfGrdvZLRWOM9Je0g&usqp=CAU" alt="" width="50px"></h5>
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor sit,
+                    <br> amet consectetur adipisicing 
+                    <br> elit. Eligendi, dolore. <a href="">Details...</a>
+                </p>
+            </div>
+            <div class="option">
+                <h5><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKi_os5sgDbYC2IQJJpTfwUHioQeuIYXiqA&usqp=CAU" alt="" width="50px"></h5>
+                <h3>Search Optimization</h3>
+                <p>Lorem ipsum dolor sit 
+                    <br> amet consectetur adipisicing
+                    <br> elit. Magni, inventore! <a href="">Details...</a>
+                </p>
+            </div>
+            <div class="option">
+                <h5><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbYwsiwVW4bvajjkmR7YRH-aeRbtLBhvm2CsQpivH7vwfNBvsYhxJC1O9kcgscVJ2_MM&usqp=CAU" alt="" width="50px"></h5>
+                <h3>Online Shop</h3>
+                <p>Lorem ipsum dolor sit 
+                    <br> amet consectetur, adipisicing 
+                    <br> elit. Illo, tempore. <a href="">Details</a>
+                </p>
+            </div>
+            <div class="option">
+                <h5><img src="https://seeklogo.com/images/F/facebook-like-logo-32FAB6926D-seeklogo.com.png" alt="" width="50px"></h5>
+                <h3>Social Media</h3>
+                <p>Lorem ipsum dolor sit 
+                    <br> amet consectetur, adipisicing 
+                    <br> elit. Minima, magni! <a href="">Details...</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="workmenu">
+            <h1>Our Portfolio Awesome</h1>
+            <button><a href="">More Works</a></button>
+        </div>
+        <div class="workbox">
+            <div class="workbox1">
+                <img src="https://img.freepik.com/free-vector/photo-camera-icon_1025-730.jpg?w=360" alt="" width="50px">
+                <div class="txt">
+                    <span class="txtcolor">Lorem ipsum dolor sit amet.</span>
+                    <br>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum temporibus minima dolores praesentium consequatur qui nemo laboriosam voluptatum incidunt.</span>
+                </div>
+            </div>
+            <div class="workbox1">
+                <img src="https://img.freepik.com/free-vector/photo-camera-icon_1025-730.jpg?w=360" alt="" width="50px">
+                <div class="txt">
+                    <span class="txtcolor">Lorem, ipsum dolor.</span>
+                    <br>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusamus odio autem commodi molestiae deleniti assumenda vero dolor tempora eligendi.</span>
+                </div>
+            </div>
+            <div class="workbox1">
+                <img src="https://cdn1.vectorstock.com/i/1000x1000/47/95/eye-logo-design-templatecreative-camera-media-vector-27964795.jpg" alt="" width="40px">
+                <div class="txt">
+                    <span class="txtcolor">Lorem ipsum dolor sit amet.</span>
+                    <br>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, deleniti odit? Explicabo reprehenderit nostrum cum maiores perspiciatis commodi deleniti id.</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="offersbox">
+            <h1>WHAT WE OFFERS</h1>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam omnis accusantium praesentium facilis. Dicta eveniet expedita soluta consequuntur earum voluptatibus, <br> consequatur quis vel, ad, optio facilis itaque id dolores assumenda vitae fuga accusantium totam! Debitis doloremque dolorum aut maiores deserunt!</span>
+            <div class="boxes">
+                <div class="offersbox1">
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor, sit amet <br>
+                         consectetur adipisicing elit. <br>
+                         Totam omnis vero at magni consequatur <br>
+                          ab dolores nemo maiores velit. Nulla!</p>
+                          <button class="moreinfo">details</button>
+                          
+                </div>
+                <div class="offersbox1">
+                    <h3>Search Optimaization</h3>
+                    <p>Lorem ipsum dolor sit amet,<br>
+                         consectetur adipisicing elit. <br>
+                          Beatae, consequuntur molestiae! Cum, <br>
+                           labore eveniet! Ratione iure sed
+                    </p>
+                    <button class="moreinfo">details</button>
+                </div>
+                <div class="offersbox1">
+                    <h3>Online Shope</h3>
+                    <p>Lorem ipsum dolor sit amet <br>
+                         consectetur adipisicing elit. <br>
+                          Voluptatibus animi fugiat nihil <br>
+                           nulla dignissimos quibusdam.</p>
+                           <button class="moreinfo">details</button>
+                </div>
+                <div class="offersbox1">
+                    <h3>Social Media</h3>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                         consectetur adipisicing elit. <br>
+                          Eaque corporis obcaecati quae. <br>
+                           Sapiente, nihil provident.</p>
+                           <button class="moreinfo">details</button>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>
